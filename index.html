@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Decimal Equivalent: <span id="dec">0</span></h1>
+        <div class="box">
+            <div class="block" id="b6">
+                <div class="front">0</div>
+                <div class="back">1</div>
+            </div>
+            <div class="block" id="b5">
+                <div class="front">0</div>
+                <div class="back">1</div>
+            </div>
+            <div class="block" id="b4">
+                <div class="front">0</div>
+                <div class="back">1</div>
+            </div>
+            <div class="block" id="b3">
+                <div class="front">0</div>
+                <div class="back">1</div>
+            </div>
+            <div class="block" id="b2">
+                <div class="front">0</div>
+                <div class="back">1</div>
+            </div>
+            <div class="block" id="b1">
+                
+                <div class="front"><h3>Click Me</h3>0</div>
+                <div class="back"><h3>Click Me</h3>1</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var c=0;
+        document.getElementById('b1').addEventListener('click',function(){
+            this.classList.toggle('active');
+            c++;
+            if(c==64){
+                c=0;
+            }
+            document.getElementById('dec').innerHTML=c;
+            if(c%2 == 0){
+                document.getElementById('b2').classList.toggle('active');
+            }
+            if(c%4 == 0){
+                document.getElementById('b3').classList.toggle('active');
+            }
+            if(c%8 == 0){
+                document.getElementById('b4').classList.toggle('active');
+            }
+            if(c%16 == 0){
+                document.getElementById('b5').classList.toggle('active');
+            }
+            if(c%32 == 0){
+                document.getElementById('b6').classList.toggle('active');
+            }
+        })
+    </script>
+</body>
+</html>
