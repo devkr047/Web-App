@@ -15,7 +15,7 @@ body{
 }
 
 .box{
-    height: 40%;
+    height: 50%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -23,14 +23,17 @@ body{
     gap: 20px;
     perspective: -1000;
     padding-inline: 20px;
+    position: relative;
+    background-color: #583515;
+    padding-block: 30px;
 }
 
 h1{
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     text-align: center;
-    font-family: calibri;
+    font-family: cursive;
     color: #fff;
-    font-size: 4em;
+    font-size: 3em;
     text-shadow: 5px 5px 5px black;
     user-select: none;
 }
@@ -44,7 +47,18 @@ h1{
     transition: all 1s ease;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     user-select: none;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #A1662F;
+}
+
+.box::before{
+    content: '';
+    height: 10px;
+    width: 100%;
+    background: #ae7743;
+    top: 50%;
+    z-index: 0;
+    left: 0;
+    position: absolute;
 }
 
 .block.active{
@@ -73,17 +87,6 @@ h1{
     background: black;
     left: -30px;
     top: 80%;
-
-}
-
-.front::before{
-    content:'';
-    height: 50px;
-    width: 20px;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.371);
-    left: 20px;
-    top: 10%;
 
 }
 
